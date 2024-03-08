@@ -1,0 +1,163 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+
+
+
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- pay dialog -->
+    <style name="TmDsDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/dialog_white_tm</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="TransparentDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/dialog_white_tm</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 设置自定义布局的背景透明 -->
+    </style>
+
+    <!-- Dialog去掉标题栏 -->
+    <style name="NoTitleDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <!-- 除去title -->
+    </style>
+
+    <!-- Dialog无边框 -->
+    <style name="NoFrameDialog" parent="@style/NoTitleDialog">
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+
+    <style name="NoTitleAndNoFrameDialog" parent="@style/NoFrameDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="LoadingDialog" parent="@style/NoTitleAndNoFrameDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="whiteDialog" parent="@style/NoTitleAndNoFrameDialog">
+        <item name="android:background">@color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="NoDimDialog" parent="@style/NoTitleAndNoFrameDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="MyRatingBar_40" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_40_bg</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:maxHeight">40dp</item>
+    </style>
+
+
+    <style name="MyRatingBar_20" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_bg</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:maxHeight">20dp</item>
+    </style>
+
+
+    <style name="checkboxShopGoods" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_shop_goods_list</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!-- Navigation Header -->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="full_image_progressbar" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:indeterminateDrawable">@drawable/progress_large_holo</item>
+    </style>
+
+    <style name="full_image_retry_text">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+
+    <style name="full_image_progress_text">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffeeeeee</item>
+    </style>
+
+    <style name="AppSplash" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/hmyc_plus</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppSplash2" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/hmyc_plus</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/xiabiao</item>
+        <item name="android:textColor">#9F9F9F</item>
+        <item name="android:paddingLeft">5dip</item>
+    </style>
+
+    <style name="AppSplashAD" parent="android:Theme">
+        <item name="android:windowBackground">@drawable/ad_1</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressBarHorizontal_color" parent="android:Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_update</item>
+        <item name="android:minHeight">2dip</item>
+        <item name="android:maxHeight">2dip</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BookList</string>
+
+    <string name="add_book_item_content_description">Add new book item</string>
+    <string name="bookName_hint">书名:</string>
+    <string name="author_hint">作者:</string>
+    <string name="title_hint">标题:</string>
+    <string name="sbn_hint">Sbn:</string>
+    <string name="publishtime_hint">发布时间:</string>
+    <string name="save_btn">Save</string>
+    <string name="error_input_name">Invalid name</string>
+    <string name="error_input_author">Invalid author</string>
+    <string name="error_input_title">Invalid title</string>
+    <string name="error_input_sbn">Invalid sbn</string>
+    <string name="error_input_publishtime">Invalid publishtime</string>
+</resources>
