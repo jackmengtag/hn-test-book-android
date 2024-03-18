@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 import com.gyf.immersionbar.ImmersionBar;
 import com.yangna.lbdsp.MainActivity;
 import com.yangna.lbdsp.R;
+import com.yangna.lbdsp.book.view.BookListActivity;
 import com.yangna.lbdsp.common.base.BaseApplication;
 import com.yangna.lbdsp.common.base.BasePresenterActivity;
 import com.yangna.lbdsp.common.ewmsm.CodeUtils;
@@ -51,7 +52,7 @@ import pub.devrel.easypermissions.EasyPermissions;
 /* 登陆页 */
 public class LoginActivity extends BasePresenterActivity<LoginPresenter> implements LoginView, UploadAddresView, EasyPermissions.PermissionCallbacks {
     private static final String TAG = "LoginActivity";
-    private Button get_code_btn, login_btn, scan_code_btn;
+    private Button get_code_btn, login_btn, scan_code_btn,book_btn;
     private ClearEditText phone, yzcode;
     public static final String KEY_TITLE = "key_title";
     public static final String KEY_IS_CONTINUOUS = "key_continuous_scan";
@@ -114,6 +115,8 @@ public class LoginActivity extends BasePresenterActivity<LoginPresenter> impleme
         yzcode = findViewById(R.id.yzcode);
         get_code_btn = findViewById(R.id.get_code_btn);
         login_btn = findViewById(R.id.login_btn);
+
+        book_btn = findViewById(R.id.book_btn);
         scan_code_btn = findViewById(R.id.scan_code_btn);
 //        imageView = findViewById(R.id.home_imag);
 //        imageView.setOnClickListener(new View.OnClickListener() {
@@ -198,6 +201,17 @@ public class LoginActivity extends BasePresenterActivity<LoginPresenter> impleme
                 }
             }
         });
+
+
+        //书籍
+        book_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent   intent = new Intent(context, BookListActivity.class);
+                startActivity(intent);
+            }
+        });
+
         if (getIntent() != null) {
             mTag = getIntent().getIntExtra("tag", -1);
         }

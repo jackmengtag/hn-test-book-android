@@ -1,4 +1,4 @@
-package com.hn.book.bean;
+package com.yangna.lbdsp.book.bean;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;

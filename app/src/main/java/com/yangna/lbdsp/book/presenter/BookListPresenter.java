@@ -1,25 +1,21 @@
-package com.hn.book.presenter;
+package com.yangna.lbdsp.book.presenter;
 
 import android.content.Context;
 
-import com.hn.book.bean.HnBook;
-import com.hn.book.impl.BookListView;
-import com.hn.book.model.BookDetailResultModel;
-import com.hn.book.model.BookListModel;
-import com.hn.book.param.DeleteListParam;
-import com.hn.book.param.DeleteParam;
-import com.hn.book.param.QueryDetailParam;
-import com.hn.book.param.QueryListParam;
+import com.yangna.lbdsp.book.bean.HnBook;
+import com.yangna.lbdsp.book.impl.BookListView;
+import com.yangna.lbdsp.book.model.BookDetailResultModel;
+import com.yangna.lbdsp.book.model.BookListModel;
+import com.yangna.lbdsp.book.param.DeleteListParam;
+import com.yangna.lbdsp.book.param.DeleteParam;
+import com.yangna.lbdsp.book.param.QueryDetailParam;
+import com.yangna.lbdsp.book.param.QueryListParam;
 import com.yangna.lbdsp.common.UrlConfig;
 import com.yangna.lbdsp.common.base.BaseModel;
 import com.yangna.lbdsp.common.base.BasePresenter;
 import com.yangna.lbdsp.common.manager.ToastManager;
 import com.yangna.lbdsp.common.net.MyObserver;
 import com.yangna.lbdsp.common.net.NetWorks;
-import com.yangna.lbdsp.mall.impl.ProductView;
-import com.yangna.lbdsp.mall.model.ProductDetailResultModel;
-import com.yangna.lbdsp.mall.model.TWebshopProductDetail;
-import com.yangna.lbdsp.mall.param.RequestProductDetailParam;
 
 public class BookListPresenter extends BasePresenter {
 
@@ -206,6 +202,8 @@ public class BookListPresenter extends BasePresenter {
 //      Map<String, String> map = UrlConfig.getCommonMap();
 //      map.put("token", BaseApplication.getInstance().getUserId());
         QueryListParam queryListParam=new QueryListParam();
+        queryListParam.setPageNo(1);
+        queryListParam.setPageSize(10);
 
         NetWorks.getInstance().getBookList(context, queryListParam, new MyObserver<BookListModel>() {
             @Override

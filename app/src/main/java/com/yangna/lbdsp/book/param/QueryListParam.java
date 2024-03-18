@@ -1,4 +1,4 @@
-package com.hn.book.param;
+package com.yangna.lbdsp.book.param;
 
 public class QueryListParam {
 

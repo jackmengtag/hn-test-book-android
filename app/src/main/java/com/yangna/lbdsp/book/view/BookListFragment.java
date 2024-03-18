@@ -1,4 +1,4 @@
-package com.hn.book.view;
+package com.yangna.lbdsp.book.view;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,21 +9,15 @@ import android.widget.ListView;
 
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.hn.book.adapter.BookListAdapter;
-import com.hn.book.impl.BookListView;
-import com.hn.book.model.BookDetailResultModel;
-import com.hn.book.model.BookListModel;
-import com.hn.book.presenter.BookListPresenter;
+import com.yangna.lbdsp.book.adapter.BookListAdapter;
+import com.yangna.lbdsp.book.impl.BookListView;
+import com.yangna.lbdsp.book.model.BookDetailResultModel;
+import com.yangna.lbdsp.book.model.BookListModel;
+import com.yangna.lbdsp.book.presenter.BookListPresenter;
 import com.yangna.lbdsp.R;
 import com.yangna.lbdsp.common.base.BaseModel;
 import com.yangna.lbdsp.common.base.BasePresenterFragment;
-import com.yangna.lbdsp.common.eventbus.BusMallActual;
-import com.yangna.lbdsp.common.swiperefreshLayout.ToastUtil;
-import com.yangna.lbdsp.mall.adapter.MallOrderListAdapter;
 import com.yangna.lbdsp.mall.impl.ClickListener;
-import com.yangna.lbdsp.mall.impl.MallOrderView;
-import com.yangna.lbdsp.mall.model.MallOrderListModel;
-import com.yangna.lbdsp.mall.presenter.MallOrderListPresenter;
 
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

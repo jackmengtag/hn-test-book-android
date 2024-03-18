@@ -2,13 +2,13 @@ package com.yangna.lbdsp.common.net;
 
 import android.content.Context;
 
-import com.hn.book.bean.HnBook;
-import com.hn.book.model.BookDetailResultModel;
-import com.hn.book.model.BookListModel;
-import com.hn.book.param.DeleteListParam;
-import com.hn.book.param.DeleteParam;
-import com.hn.book.param.QueryDetailParam;
-import com.hn.book.param.QueryListParam;
+import com.yangna.lbdsp.book.bean.HnBook;
+import com.yangna.lbdsp.book.model.BookDetailResultModel;
+import com.yangna.lbdsp.book.model.BookListModel;
+import com.yangna.lbdsp.book.param.DeleteListParam;
+import com.yangna.lbdsp.book.param.DeleteParam;
+import com.yangna.lbdsp.book.param.QueryDetailParam;
+import com.yangna.lbdsp.book.param.QueryListParam;
 import com.wwb.laobiao.Search.impl.Search;
 import com.wwb.laobiao.Search.impl.SearchModel;
 import com.wwb.laobiao.address.bean.AdressInfor;
@@ -108,7 +108,6 @@ import com.yangna.lbdsp.mall.bean.SuggestBean;
 import com.yangna.lbdsp.mall.model.ProductDetailResultModel;
 import com.yangna.lbdsp.mall.model.MallOrderListModel;
 import com.yangna.lbdsp.mall.model.ShopPingCartModel;
-import com.yangna.lbdsp.mall.model.TWebshopProductDetail;
 import com.yangna.lbdsp.mall.param.RequestProductDetailParam;
 import com.yangna.lbdsp.mine.model.BasePageRequestParam;
 
@@ -116,8 +115,6 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import retrofit2.http.Body;
-import retrofit2.http.POST;
 
 /**
  * artifact  NetWorks

@@ -1,6 +1,6 @@
-package com.hn.book.param;
+package com.yangna.lbdsp.book.param;
 
-public class DeleteParam {
+public class QueryDetailParam {
     private String id;
 
     public String getId() {

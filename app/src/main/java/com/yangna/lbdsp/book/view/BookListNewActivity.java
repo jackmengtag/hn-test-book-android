@@ -1,13 +1,12 @@
-package com.hn.book.view;
+package com.yangna.lbdsp.book.view;
 
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.hn.book.adapter.BookPagerAdapter;
 import com.yangna.lbdsp.R;
+import com.yangna.lbdsp.book.adapter.BookPagerAdapter;
 import com.yangna.lbdsp.common.base.BaseFragActivity;
-import com.yangna.lbdsp.mine.adapter.TabPagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +16,7 @@ import butterknife.BindView;
 /**
  * 商品订单
  */
-public class BookListActivity extends BaseFragActivity {
+public class BookListNewActivity extends BaseFragActivity {
     @BindView(R.id.tab_layout)
     TabLayout tabLayout;
     @BindView(R.id.vp)
@@ -39,7 +38,7 @@ public class BookListActivity extends BaseFragActivity {
     protected void initView() {
         super.initView();
 
-        titleManager.setTitleTxt("商城订单");
+        titleManager.setTitleTxt("书籍列表");
         titleManager.setLeftLayout(0, R.mipmap.back_left_img);
 
         fragments = new ArrayList<>();
@@ -48,19 +47,19 @@ public class BookListActivity extends BaseFragActivity {
         titleList.clear();
         titleList.add("全部");
         titleList.add("待付款");
-        titleList.add("待使用");
-        titleList.add("待收货");
-        titleList.add("待评价");
-        titleList.add("退换");
+//        titleList.add("待使用");
+//        titleList.add("待收货");
+//        titleList.add("待评价");
+//        titleList.add("退换");
 
 
         //添加fragment
         fragments.add(BookListFragment.newInstance(10));
         fragments.add(BookListFragment.newInstance(0));
-        fragments.add(BookListFragment.newInstance(3));
-        fragments.add(BookListFragment.newInstance(1));
-        fragments.add(BookListFragment.newInstance(5));
-        fragments.add(BookListFragment.newInstance(99));
+//        fragments.add(BookListFragment.newInstance(3));
+//        fragments.add(BookListFragment.newInstance(1));
+//        fragments.add(BookListFragment.newInstance(5));
+//        fragments.add(BookListFragment.newInstance(99));
 
         //将tab栏和滑动页关联起来
         adapter = new BookPagerAdapter(getSupportFragmentManager(), fragments, titleList);

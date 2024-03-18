@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="17"
-8-->D:\HedeProject\liuzhou-yn-video-android\superplayerkit\src\main\AndroidManifest.xml
+8-->D:\HedeProject\hainanqinchengProject\hn-book-android-java\superplayerkit\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="28" />
-9-->D:\HedeProject\liuzhou-yn-video-android\superplayerkit\src\main\AndroidManifest.xml
+9-->D:\HedeProject\hainanqinchengProject\hn-book-android-java\superplayerkit\src\main\AndroidManifest.xml
 10
 11</manifest>

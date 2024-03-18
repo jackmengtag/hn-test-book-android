@@ -1,4 +1,4 @@
-package com.hn.book.adapter;
+package com.yangna.lbdsp.book.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import com.bumptech.glide.request.RequestOptions;
-import com.hn.book.bean.HnBook;
+import com.yangna.lbdsp.book.bean.HnBook;
 import com.yangna.lbdsp.R;
 import com.yangna.lbdsp.common.base.ListBaseAdapter;
 import com.yangna.lbdsp.common.manager.UIManager;
