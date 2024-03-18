@@ -77,6 +77,18 @@
                 android:layout_height="@dimen/dp_18"
                 android:scaleType="fitXY"
                 android:visibility="gone" />
+
+            <Button
+                android:id="@+id/add_btn"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_backr_22"
+                android:gravity="center"
+                android:text="添加"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
         </LinearLayout>
     </RelativeLayout>
 
