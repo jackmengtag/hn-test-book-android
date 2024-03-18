@@ -1,0 +1,2 @@
+com/tencent/liteav/demo/superplayer/test/BuildConfig.java
+ com.tencent.liteav.demo.superplayer.test.BuildConfig
