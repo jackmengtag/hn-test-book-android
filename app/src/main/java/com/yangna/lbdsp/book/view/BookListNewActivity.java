@@ -124,7 +124,7 @@ public class BookListNewActivity extends BasePresenterActivity<BookListPresenter
     }
 
     @Override
-    public void getBookList(List<HnBook> bookList) {
+    public void getBookList(List<Map<String,Object>> bookList) {
         if (bookList.size() <= 0 && currentPage == 1) {
             noDataLl.setVisibility(View.VISIBLE);
             refresh.setVisibility(View.GONE);

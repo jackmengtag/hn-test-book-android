@@ -5,6 +5,7 @@ import com.yangna.lbdsp.book.bean.HnBook;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Description: 基础实体类
@@ -26,7 +27,7 @@ public class BookBaseResult {
 
     private Integer pages;
 
-    private List<HnBook> records=new ArrayList<HnBook>();
+    private List<Map<String,Object>> records=new ArrayList<Map<String,Object>>();
 
 
     public BookBaseResult() {
@@ -104,11 +105,11 @@ public class BookBaseResult {
         this.pages = pages;
     }
 
-    public List<HnBook> getRecords() {
+    public List<Map<String,Object>> getRecords() {
         return records;
     }
 
-    public void setRecords(List<HnBook> records) {
+    public void setRecords(List<Map<String,Object>> records) {
         this.records = records;
     }
 }

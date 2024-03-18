@@ -19,7 +19,7 @@ public interface BookListView {
 
     public void deleteBookList(BaseModel model);//
 
-    public void getBookList(List<HnBook> bookList);//
+    public void getBookList(List<Map<String,Object>> bookList);//
 
     public void updateBook(BaseModel model);//
 

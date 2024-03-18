@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * artifact  自定义ListBaseAdapter

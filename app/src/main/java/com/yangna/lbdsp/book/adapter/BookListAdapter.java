@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * 书籍管理adapter
  */
-public class BookListAdapter extends ListBaseAdapter<HnBook> {
+public class BookListAdapter extends ListBaseAdapter<Map<String,Object>> {
 
     private TextStyleUtils.TextStyle ts = new TextStyleUtils.TextStyle(ContextCompat.getColor(context, R.color.text_color_black), 10);
 
@@ -49,8 +49,8 @@ public class BookListAdapter extends ListBaseAdapter<HnBook> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
 
-//        final HnBook hnBook = this.bookList.get(position);
-        final Map<String,Object> map = this.bookList.get(position);
+        final Map<String,Object> map = getItem(position);
+//        final Map<String,Object> map = this.bookList.get(position);
 
         if (null == convertView) {
             convertView = LayoutInflater.from(context).inflate(R.layout.activity_book_list_item, null);
