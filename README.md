@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 老表短视频
 
 #### 介绍
@@ -40,3 +41,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
+=======
+# hn-test-book-android
+海南钦诚---书籍---android端项目
+>>>>>>> f4c364ad325bb07d8f2b8312ada0a579707acfa8
