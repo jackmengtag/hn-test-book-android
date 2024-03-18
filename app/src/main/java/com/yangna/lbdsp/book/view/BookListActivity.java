@@ -14,7 +14,7 @@ import java.util.List;
 import butterknife.BindView;
 
 /**
- * 商品订单
+ * 弃用
  */
 public class BookListActivity extends BaseFragActivity {
     @BindView(R.id.tab_layout)

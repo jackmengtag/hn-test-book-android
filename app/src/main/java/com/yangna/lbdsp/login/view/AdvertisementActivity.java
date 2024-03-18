@@ -26,6 +26,7 @@ import com.gyf.immersionbar.ImmersionBar;
 import com.yangna.lbdsp.MainActivity;
 import com.yangna.lbdsp.R;
 import com.yangna.lbdsp.book.view.BookListActivity;
+import com.yangna.lbdsp.book.view.BookListNewActivity;
 import com.yangna.lbdsp.common.base.BaseApplication;
 import com.yangna.lbdsp.login.presenter.AdInterface;
 
@@ -184,7 +185,7 @@ public class AdvertisementActivity extends AppCompatActivity implements View.OnC
 
     public void goNextActivity() {
 //        it = new Intent(this, MainActivity.class);
-        it = new Intent(this, BookListActivity.class);
+        it = new Intent(this, BookListNewActivity.class);
         startActivity(it);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
 //        finish();
