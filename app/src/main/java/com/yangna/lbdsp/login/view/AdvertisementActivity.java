@@ -23,11 +23,8 @@ import androidx.core.app.ActivityCompat;
 
 import com.bumptech.glide.Glide;
 import com.gyf.immersionbar.ImmersionBar;
-import com.yangna.lbdsp.MainActivity;
 import com.yangna.lbdsp.R;
-import com.yangna.lbdsp.book.view.BookListActivity;
 import com.yangna.lbdsp.book.view.BookListNewActivity;
-import com.yangna.lbdsp.common.base.BaseApplication;
 import com.yangna.lbdsp.login.presenter.AdInterface;
 
 import org.json.JSONException;
@@ -36,7 +33,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.IOException;
 
-import jp.wasabeef.glide.transformations.CropCircleTransformation;
 import okhttp3.OkHttpClient;
 import okhttp3.ResponseBody;
 import retrofit2.Call;

@@ -21,7 +21,7 @@ import androidx.core.content.ContextCompat;
 import com.gyf.immersionbar.ImmersionBar;
 import com.yangna.lbdsp.MainActivity;
 import com.yangna.lbdsp.R;
-import com.yangna.lbdsp.book.view.BookListActivity;
+import com.yangna.lbdsp.book.view.BookListNewActivity;
 import com.yangna.lbdsp.common.base.BaseApplication;
 import com.yangna.lbdsp.common.base.BasePresenterActivity;
 import com.yangna.lbdsp.common.ewmsm.CodeUtils;
@@ -207,7 +207,7 @@ public class LoginActivity extends BasePresenterActivity<LoginPresenter> impleme
         book_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent   intent = new Intent(context, BookListActivity.class);
+                Intent   intent = new Intent(context, BookListNewActivity.class);
                 startActivity(intent);
             }
         });

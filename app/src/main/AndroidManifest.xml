@@ -116,12 +116,6 @@
         </activity> <!-- 主页 -->
 
         <activity
-            android:name=".book.view.BookListActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
             android:name=".book.view.BookListNewActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">

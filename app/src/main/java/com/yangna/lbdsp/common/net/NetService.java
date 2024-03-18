@@ -2,6 +2,7 @@ package com.yangna.lbdsp.common.net;
 
 
 import com.yangna.lbdsp.book.bean.HnBook;
+import com.yangna.lbdsp.book.model.BookBaseModel;
 import com.yangna.lbdsp.book.model.BookDetailResultModel;
 import com.yangna.lbdsp.book.model.BookListModel;
 import com.yangna.lbdsp.book.param.DeleteListParam;
@@ -435,7 +436,7 @@ interface NetService {
     Observable<BaseModel> deleteBookList(@Body DeleteListParam deleteListParam);//
 
     @POST("/jeecg-boot/book/hnBook/bookList")
-    Observable<BookListModel> getBookList(@Body QueryListParam queryListParam);//
+    Observable<BookBaseModel> getBookList(@Body QueryListParam queryListParam);//
 
     @POST("/book/hnBook/edit")
     Observable<BaseModel> updateBook(@Body HnBook book);//

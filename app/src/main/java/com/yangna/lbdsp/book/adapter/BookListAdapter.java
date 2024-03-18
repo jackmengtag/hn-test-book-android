@@ -16,7 +16,10 @@ import com.yangna.lbdsp.common.manager.UIManager;
 import com.yangna.lbdsp.common.utils.TextStyleUtils;
 import com.yangna.lbdsp.mall.impl.ClickListener;
 import com.yangna.lbdsp.mall.view.CommentsActivity;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -29,16 +32,25 @@ public class BookListAdapter extends ListBaseAdapter<HnBook> {
 
     private ClickListener mClickListener;
 
+    private List<Map<String,Object>> bookList=new ArrayList<>();
+
     public BookListAdapter(Context context, ClickListener clickListener) {
         super(context);
         mClickListener = clickListener;
     }
 
+//    public BookListAdapter(Context context, List<Map<String,Object>> bookList) {
+//        super(context);
+//        this.bookList =bookList;
+////        notifyDataSetChanged();
+//    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
 
-        final HnBook hnBook = getItem(position);
+//        final HnBook hnBook = this.bookList.get(position);
+        final Map<String,Object> map = this.bookList.get(position);
 
         if (null == convertView) {
             convertView = LayoutInflater.from(context).inflate(R.layout.activity_book_list_item, null);
@@ -68,30 +80,30 @@ public class BookListAdapter extends ListBaseAdapter<HnBook> {
 //
 //        Glide.with(context).asDrawable().load(hnBook.getShoplogo()).apply(options).into(holder.ivIcon);
 
-        if (hnBook.getPublishtime() != null) {
-            holder.publish_time.setText(hnBook.getPublishtime().toString());
+        if (map.get("publishtime") != null) {
+            holder.publish_time.setText(map.get("publishtime").toString());
         }
 
-        if (hnBook.getBookname() != null) {
-            holder.name_tv.setText(hnBook.getBookname());
+        if (map.get("bookname") != null) {
+            holder.name_tv.setText(map.get("bookname").toString());
         } else {
             holder.name_tv.setText("暂时没有店铺的名字");
         }
 
-        if (hnBook.getTitle() != null) {
-            holder.title_tv.setText(hnBook.getTitle());
+        if (map.get("title") != null) {
+            holder.title_tv.setText(map.get("title").toString());
         } else {
             holder.title_tv.setText("商品内容出错");
         }
 
-        if (hnBook.getAuthor() != null) {
-            holder.author_tv.setText(hnBook.getAuthor());
+        if (map.get("author") != null) {
+            holder.author_tv.setText(map.get("author").toString());
         } else {
             holder.title_tv.setText("商品内容出错");
         }
 
-        if (hnBook.getSbn() != null) {
-            holder.sbn_tv.setText(hnBook.getSbn());
+        if (map.get("sbn") != null) {
+            holder.sbn_tv.setText(map.get("sbn").toString());
         } else {
             holder.title_tv.setText("商品内容出错");
         }
@@ -101,9 +113,9 @@ public class BookListAdapter extends ListBaseAdapter<HnBook> {
             holder.edit_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Map<String, Object> map = new HashMap<>();
-                    map.put("id", hnBook.getId());
-                    UIManager.switcher(context, map, CommentsActivity.class);
+                    Map<String, Object> editMap = new HashMap<>();
+                    editMap.put("id", map.get("id"));
+                    UIManager.switcher(context, editMap, CommentsActivity.class);
                 }
             });
 
@@ -111,9 +123,9 @@ public class BookListAdapter extends ListBaseAdapter<HnBook> {
         holder.delete_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Map<String, Object> map = new HashMap<>();
-                map.put("id", hnBook.getId());
-                UIManager.switcher(context, map, CommentsActivity.class);
+                Map<String, Object> deleteMap = new HashMap<>();
+                deleteMap.put("id", map.get("id"));
+                UIManager.switcher(context, deleteMap, CommentsActivity.class);
             }
         });
 

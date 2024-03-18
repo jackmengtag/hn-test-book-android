@@ -19,14 +19,14 @@ public class ServiceConfig {
     //    private static final String RELEASE_ROOT_URL = "http://192.168.0.116:8080";//正式环境根路径 http://47.111.182.88:8084
 //     private static final String RELEASE_ROOT_URL = "http://39.108.150.225:8080";//正式环境根路径
 //     private static final String RELEASE_ROOT_URL = "http://8.129.110.148:8080";//测试环境根路径
-    private static final String RELEASE_ROOT_URL = "http://192.168.200.104:8080/jeecg-boot/";//测试环境根路径 http://47.111.182.88:8084
+    private static final String RELEASE_ROOT_URL = "http://192.168.2.14:8080/jeecg-boot/";//测试环境根路径 http://47.111.182.88:8084
 
     //private static final String RELEASE_ROOT_URL = "http://192.168.3.11:84";//本地环境根路径
-    private static final String TEST_ROOT_URL = "http://192.168.200.104:8080/jeecg-boot/";//测试环境根路径
+    private static final String TEST_ROOT_URL = "http://192.168.2.14:8080/jeecg-boot/";//测试环境根路径
 
     //private static final String DEBUG_ROOT_URL = "http://192.168.3.249:8080";//本地环境根路径
     //private static final String DEBUG_ROOT_URL = "http://192.168.3.15:84";//正式环境根路径
-    private static final String DEBUG_ROOT_URL = "http://192.168.200.104:8080/jeecg-boot/";//本地环境根路径+
+    private static final String DEBUG_ROOT_URL = "http://192.168.2.14:8080/jeecg-boot/";//本地环境根路径+
     //private static final String DEBUG_ROOT_URL = "http://192.168.3.113:8080";//本地环境根路径
     
     public enum Mode {

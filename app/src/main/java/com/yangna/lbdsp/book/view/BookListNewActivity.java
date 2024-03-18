@@ -14,7 +14,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.yangna.lbdsp.R;
 import com.yangna.lbdsp.book.adapter.BookListAdapter;
 import com.yangna.lbdsp.book.adapter.BookPagerAdapter;
+import com.yangna.lbdsp.book.bean.HnBook;
 import com.yangna.lbdsp.book.impl.BookListView;
+import com.yangna.lbdsp.book.model.BookBaseResult;
 import com.yangna.lbdsp.book.model.BookDetailResultModel;
 import com.yangna.lbdsp.book.model.BookListModel;
 import com.yangna.lbdsp.book.presenter.BookListPresenter;
@@ -27,6 +29,7 @@ import com.yangna.lbdsp.mall.presenter.ShopPingCartPresenter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 
@@ -58,7 +61,7 @@ public class BookListNewActivity extends BasePresenterActivity<BookListPresenter
     @Override
     protected void initView() {
         super.initView();
-
+        mPresenter.setBookListView(this);
         titleManager.setTitleTxt("书籍列表");
         titleManager.setLeftLayout(0, R.mipmap.back_left_img);
 
@@ -69,9 +72,13 @@ public class BookListNewActivity extends BasePresenterActivity<BookListPresenter
             }
         };
 
-        //将tab栏和滑动页关联起来
+        Log.e("BookListNewActivity","getBookList");
         adapter = new BookListAdapter(context,deleteClick);
+        Log.e("BookListNewActivity","new BookListAdapter");
         lv.setAdapter(adapter);
+        Log.e("BookListNewActivity","setAdapter");
+
+        //将tab栏和滑动页关联起来
         mPresenter.getBookListByParam(context);
         Log.i(TAG, "getBookListByParam:" + "加载数据中.....");
 
@@ -117,8 +124,8 @@ public class BookListNewActivity extends BasePresenterActivity<BookListPresenter
     }
 
     @Override
-    public void getBookList(BookListModel.BookModel bookModel) {
-        if (bookModel.getRecords().size() <= 0 && currentPage == 1) {
+    public void getBookList(List<HnBook> bookList) {
+        if (bookList.size() <= 0 && currentPage == 1) {
             noDataLl.setVisibility(View.VISIBLE);
             refresh.setVisibility(View.GONE);
         } else {
@@ -126,12 +133,14 @@ public class BookListNewActivity extends BasePresenterActivity<BookListPresenter
             refresh.setVisibility(View.VISIBLE);
 
             if (1 == currentPage) {
-                adapter.setDates(bookModel.getRecords());
+//                adapter.notifyDataSetChanged();
+                Log.e("BookListNewActivity","notifyDataSetChanged");
+                adapter.setDates(bookList);
             }
-            else {
-                adapter.setDates(bookModel.getRecords());
-            }
-            if (bookModel.getRecords() != null && bookModel.getRecords().size() > 0) {
+//            else {
+//                adapter.setDates(bookList);
+//            }
+            if (bookList != null && bookList.size() > 0) {
                 currentPage++;
             }
         }

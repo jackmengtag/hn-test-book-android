@@ -4,6 +4,8 @@ import android.content.Context;
 
 import com.yangna.lbdsp.book.bean.HnBook;
 import com.yangna.lbdsp.book.impl.BookListView;
+import com.yangna.lbdsp.book.model.BookBaseModel;
+import com.yangna.lbdsp.book.model.BookBaseResult;
 import com.yangna.lbdsp.book.model.BookDetailResultModel;
 import com.yangna.lbdsp.book.model.BookListModel;
 import com.yangna.lbdsp.book.param.DeleteListParam;
@@ -205,15 +207,15 @@ public class BookListPresenter extends BasePresenter {
         queryListParam.setPageNo(1);
         queryListParam.setPageSize(10);
 
-        NetWorks.getInstance().getBookList(context, queryListParam, new MyObserver<BookListModel>() {
+        NetWorks.getInstance().getBookList(context, queryListParam, new MyObserver<BookBaseModel>() {
             @Override
-            public void onNext(BookListModel model) {
+            public void onNext(BookBaseModel model) {
                 try {
-                    if (UrlConfig.RESULT_OK == model.getState()) {
-                        BookListModel.BookModel bookModel=model.getBody();
-                        bookListView.getBookList(bookModel);
+                    if (UrlConfig.RESULT_OK == model.getCode()) {
+                        BookBaseResult bookModel=model.getResult();
+                        bookListView.getBookList(bookModel.getRecords());
                     } else {
-                        ToastManager.showToast(context, model.getMsg());
+                        ToastManager.showToast(context, model.getMessage());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

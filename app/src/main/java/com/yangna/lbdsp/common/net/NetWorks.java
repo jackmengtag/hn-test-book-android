@@ -3,6 +3,7 @@ package com.yangna.lbdsp.common.net;
 import android.content.Context;
 
 import com.yangna.lbdsp.book.bean.HnBook;
+import com.yangna.lbdsp.book.model.BookBaseModel;
 import com.yangna.lbdsp.book.model.BookDetailResultModel;
 import com.yangna.lbdsp.book.model.BookListModel;
 import com.yangna.lbdsp.book.param.DeleteListParam;
@@ -451,9 +452,10 @@ public class NetWorks extends RetrofitUtils {
         setSubscribe(context, service.deleteBookList(deleteListParam), observerx);
     }
 
-    public void getBookList(Context context, QueryListParam queryListParam, MyObserver<BookListModel> observerx) {
+    public void getBookList(Context context, QueryListParam queryListParam, MyObserver<BookBaseModel> observerx) {
         setSubscribe(context, service.getBookList(queryListParam), observerx);
     }
+
 
     public void updateBook(Context context, HnBook book, MyObserver<BaseModel> observerx) {
         setSubscribe(context, service.updateBook(book), observerx);
